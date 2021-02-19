@@ -6,9 +6,9 @@ public class Personaje{
 	private String nombre;
 	private int edad;
 	
-	public Personaje(String nombre, int edad){
+	public Personaje(String nombre){
 		this.nombre = nombre;
-		this.edad = edad;
+		edad = 0;
 	}
 	public int getEdad(){
 		return edad;
