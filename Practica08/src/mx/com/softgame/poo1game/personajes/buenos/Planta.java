@@ -34,4 +34,11 @@ public class Planta extends Personaje {
 			super.decVida();
 		}
 	}
+	public void decVida(int decremento){
+		if(escudo == 'A'){
+			super.decVida(decremento*2);
+		} else {
+			super.decVida(decremento);
+		}
+	}
 }

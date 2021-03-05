@@ -5,8 +5,6 @@
 package mx.com.softgame.poo1game.personajes;
 import java.lang.String;
 public class Personaje{
-	
-	//Atributos
 	private String nombre;
 	private int vida;
 	
@@ -43,16 +41,14 @@ public class Personaje{
 	}
 	
 	public String getDetalle(){
-		String detalle ="";
-		detalle = ""+nombre + "	" + edad;
-		return detalle;
+		return (nombre + "\t" + vida)
 	}
 	
 	public decVida(){
 		decVida(1)
 	}
-	public decVida(int restarVida) {
+	public decVida(int decremento) {
 		if (vida > 0){
-			vida = vida - restarVida;
+			vida = vida - decremento;
 	}
 }
