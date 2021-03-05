@@ -18,5 +18,19 @@ public class PruebaHerencia {
 		Zombie zom03 = Zombie("Esmeralda");
 		
 		Personaje[] personajes = {per01,per02,plan01,plan02,plan03,plan04,zom01,zom02,zom03}
+		
+		for(Personaje p: personajes){
+			System.out.println(i.getDetalle());
+			
+			if(p instanceof Planta){
+				System.out.println("Soy planta");
+			}
+			if(p instanceof Zombie){
+				System.out.println("Soy zombie");
+			}
+			int aleatorio = (int) (Math.random()*10);
+			p.decVida(aleatorio);
+			System.out.println(p.getDetalle());
+		}
 	}
 }
