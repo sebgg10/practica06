@@ -8,6 +8,15 @@ public class PruebaHerencia {
 		Personaje per01 = new Personaje("Valeria",99);
 		Personaje per02 = new Personaje("Octavio");
 		
+		Planta plan01 = new Planta("Wendy",10,'B');
+		Planta plan02 = new Planta("Ricardo",50);
+		Planta plan03 = new Planta("Vania",'C');
+		Planta plan04 = new Planta("Alan");
 		
+		Zombie zom01 = Zombie("Karen",80,false);
+		Zombie zom02 = Zombie("Eduardo",true);
+		Zombie zom03 = Zombie("Esmeralda");
+		
+		Personaje[] personajes = {per01,per02,plan01,plan02,plan03,plan04,zom01,zom02,zom03}
 	}
 }
