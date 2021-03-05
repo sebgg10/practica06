@@ -35,20 +35,21 @@ public class Personaje{
 	public int getVida(){
 		return vida;
 	}
-	public boolean setVida(int vida){
+	public void setVida(int vida){
 		if (vida >= 0 && vida <= 100){
 			this.vida = vida;
+		}
 	}
-	
 	public String getDetalle(){
-		return (nombre + "\t" + vida)
+		return nombre + "\t" + vida;
 	}
 	
-	public decVida(){
-		decVida(1)
+	public void decVida(){
+		decVida(1);
 	}
-	public decVida(int decremento) {
+	public void decVida(int decremento) {
 		if (vida > 0){
-			vida = vida - decremento;
+			vida -= decremento;
+		}
 	}
 }
