@@ -5,16 +5,19 @@
 package mx.com.softgame.poo1game.personajes;
 import java.lang.String;
 public class Personaje{
+	
 	//Atributos
 	private String nombre;
 	private int vida;
+	
 	//Constructores
 	public Personaje(String nombre, int vida){
-		vida = 0;
+		this.vida = vida;
 		this.nombre = nombre;
 	}
+	
 	public Personaje(String nombre){
-		vida = 3;
+		this.vida = 3;
 		this.nombre = nombre;
 	}
 	
@@ -37,23 +40,19 @@ public class Personaje{
 	public boolean setVida(int vida){
 		if (vida >= 0 && vida <= 100){
 			this.vida = vida;
-			return true;
-		} else {
-			return false;
-		}
 	}
+	
 	public String getDetalle(){
 		String detalle ="";
 		detalle = ""+nombre + "	" + edad;
 		return detalle;
 	}
+	
 	public decVida(){
-		if (vida > 0){
-			this.vida -= 1;
-			return true;
-		} else {
-			return false;
-		}
+		decVida(1)
 	}
-	public decVida(int vida)
+	public decVida(int restarVida) {
+		if (vida > 0){
+			vida = vida - restarVida;
+	}
 }
