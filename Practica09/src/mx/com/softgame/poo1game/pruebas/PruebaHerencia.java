@@ -18,20 +18,25 @@ public class PruebaHerencia {
 		Zombie zom03 = new Zombie("Esmeralda");
 		
 		Personaje[] personajes = 
-		{per01,per02,plan01,plan02,plan03,plan04,zom01,zom02,zom03};
+		{ new Personaje("Omar",99),
+		new Planta("Karen",50),
+		new Zombie("Hanna",80,false),
 		
-		for(Personaje i: personajes){
-			System.out.println(i.getDetalle());
-			
-			if(i instanceof Planta){
-				System.out.println("Soy planta");
+		new Personaje("Omar",99),
+		new Planta("Karen",50),
+		new Zombie("Hanna",80,false)
+		};
+		
+		i = 0;
+		while (i < personajes.length){
+			for(Personaje p: personajes){
+				if (i == p){
+					System.out.println("***"+i.toString() + "es identico a" + p.toString()+", son el mismo objeto"+"***");
+				} else {
+					System.out.println("**"+i.toString() + "es igual a" + p.toString()+", son diferentes objetos"+"**");
+				}
 			}
-			if(i instanceof Zombie){
-				System.out.println("Soy zombie");
-			}
-			int aleatorio = (int) (Math.random()*10);
-			i.decVida(aleatorio);
-			System.out.println(i.getDetalle());
 		}
+
 	}
 }
