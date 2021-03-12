@@ -43,9 +43,10 @@ public class Zombie extends Personaje {
 		boolean result = super.equals(o);
 		if (o != null && o instanceof Zombie){
 			Zombie z = (Zombie) o;
-			if ataque == z.getAtaque(){
-				result=true
+			if (ataque == z.getAtaque()){
+				result=true;
 			}
 		}
+		return result;
 	}
 }

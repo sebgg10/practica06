@@ -27,14 +27,20 @@ public class PruebaHerencia {
 		new Zombie("Hanna",80,false)
 		};
 		
-		i = 0;
+		int i = 0;
 		while (i < personajes.length){
 			for(Personaje p: personajes){
-				if (i == p){
-					System.out.println("***"+i.toString() + "es identico a" + p.toString()+", son el mismo objeto"+"***");
+				if (personajes[i] == p){
+					System.out.println("***"+personajes[i].toString() + " es identico a " + p.toString()+", son el mismo objeto"+"***");
+					
 				} else {
-					System.out.println("**"+i.toString() + "es igual a" + p.toString()+", son diferentes objetos"+"**");
+					System.out.println(personajes[i].toString()+" != "+p.toString());
+				if (personajes[i].equals(p)){
+					System.out.println("**"+personajes[i].toString() + " es igual a " + p.toString()+", son diferentes objetos"+"**");
+				} else {
+					System.out.println(personajes[i].toString()+" != "+p.toString());
 				}
+				i += 1;
 			}
 		}
 
