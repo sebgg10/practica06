@@ -41,4 +41,14 @@ public class Planta extends Personaje {
 			super.decVida(decremento);
 		}
 	}
+	
+	public boolean equals(Object o){
+		boolean result = super.equals(o);
+		if (o != null && o instanceof Planta){
+			Planta j = (Planta) o;
+			if escudo == j.getEscudo(){
+				result=true
+			}
+		}
+	}
 }
