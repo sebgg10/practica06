@@ -21,8 +21,8 @@ public class Zombie extends Personaje {
 	}
 	
 	//Metodos
-	public String getDetalle(){
-		return super.getDetalle()+" "+ataque;
+	public String toString(){
+		return super.toString()+" "+ataque;
 	}
 	public void decVida(){
 		if(!ataque){
@@ -36,6 +36,16 @@ public class Zombie extends Personaje {
 			super.decVida(decremento*3);
 		}else{
 			super.decVida(decremento*2);
+		}
+	}
+	
+	public boolean equals(Object o){
+		boolean result = super.equals(o);
+		if (o != null && o instanceof Zombie){
+			Zombie z = (Zombie) o;
+			if ataque == z.getAtaque(){
+				result=true
+			}
 		}
 	}
 }
