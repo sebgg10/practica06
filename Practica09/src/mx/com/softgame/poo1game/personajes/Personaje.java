@@ -5,8 +5,8 @@
 package mx.com.softgame.poo1game.personajes;
 import java.lang.String;
 public class Personaje{
-	private String nombre;
-	private int vida;
+	protected String nombre;
+	protected int vida;
 	
 	//Constructores
 	public Personaje(String nombre, int vida){
