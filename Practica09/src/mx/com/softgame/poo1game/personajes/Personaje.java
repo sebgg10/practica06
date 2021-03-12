@@ -28,10 +28,9 @@ public class Personaje{
 	public String getNombre(){
 		return nombre;
 	}
-	public void saludar(){
-		System.out.println("Hola Alumno de POO " +nombre);
-	}
- 
+	
+	
+	
 	public int getVida(){
 		return vida;
 	}
@@ -40,7 +39,7 @@ public class Personaje{
 			this.vida = vida;
 		}
 	}
-	public String getDetalle(){
+	public String toString(){
 		return nombre + "\t" + vida;
 	}
 	
@@ -52,4 +51,6 @@ public class Personaje{
 			vida -= decremento;
 		}
 	}
+	
+	
 }
