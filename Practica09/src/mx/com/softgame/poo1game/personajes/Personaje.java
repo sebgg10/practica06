@@ -52,5 +52,14 @@ public class Personaje{
 		}
 	}
 	
-	
+	public boolean equals(Object o){
+		boolean result = false;
+		if (o != null && o instanceof Personaje){
+			Personaje p = (Personaje) o;
+			if (nombre == p.getNombre() && vida == p.getVida()){
+				result = true
+			}
+		}
+		return result;
+	}
 }
