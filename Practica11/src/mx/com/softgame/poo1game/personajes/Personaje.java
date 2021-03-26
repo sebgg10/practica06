@@ -1,7 +1,7 @@
 package mx.com.softgame.poo1game.personajes;
 import mx.com.softgame.poo1game.utils.Utileria;
 
-public class Personaje{
+public class abstract Personaje{
 	protected String nombre;
 	protected int vida;
 	private final int ID;
@@ -19,7 +19,7 @@ public class Personaje{
 	}
 	
 	//Metodos
-	public void setNombre(String nombre){
+	public abstract void setNombre(String nombre){
 		if(nombre.length()>3 && nombre.length()<10){
 		this.nombre = nombre;
 		}
@@ -49,7 +49,7 @@ public class Personaje{
 		}
 	}
 	
-	public boolean equals(Object o){
+	public abstract boolean equals(Object o){
 		boolean result = false;
 		if (o != null && o instanceof Personaje){
 			Personaje p = (Personaje) o;
