@@ -37,14 +37,14 @@ public class PruebaHerencia {
 					
 				} else {
 					System.out.println(personajes[i].toString()+" != "+p.toString());
-				
+					continue;
 				}
 				if (personajes[i].equals(p)){
 					System.out.println("**"+personajes[i].toString() + " es igual a " + p.toString()+", son diferentes objetos"+"**");
 				} else {
 					System.out.println(personajes[i].toString()+" != "+p.toString());
 				}
-				
+					continue;
 			}
 			System.out.println("");
 			i += 1;
